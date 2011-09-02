@@ -193,6 +193,12 @@ fieldset {
 	color:#fff;
 	font:bold 25px/28px Arial, Helvetica, sans-serif;
 }
+/*----- This will hide the list below the content. Unhide if u need it--------*/
+ul, .links {
+	list-style-type: upper-roman;
+	display: block;
+}
+/* ----------------------------------------*/
 .main-page #main h3 {color:#393;}
 .menu-holder {
 	overflow:hidden;

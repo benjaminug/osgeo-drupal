@@ -38,7 +38,6 @@ function osgeo_get_ie_styles() {
 }
 
  function osgeo_preprocess_page(&$vars) {
-	$vars['tabs'] = menu_primary_local_tasks();
 	$vars['tabs2'] = menu_secondary_local_tasks();
 	if (module_exists('path')) {
 		$alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
@@ -111,7 +110,7 @@ function l_2($text, $path, $options = array()) {
   global $language;
   // Merge in defaults.
   $options += array(
-      'attributes' => array('class' => ''),
+      'attributes' => array(),
       'html' => TRUE,
   	   'i'	 => 0
     );
@@ -119,9 +118,10 @@ function l_2($text, $path, $options = array()) {
   $options['attributes']['class'] .= ' link'.$options['i'];
   // Remove all HTML and PHP tags from a tooltip. For best performance, we act only
   // if a quick strpos() pre-check gave a suspicion (because strip_tags() is expensive).
- // if (isset($options['attributes']['title']) && strpos($options['attributes']['title'], '<') !== FALSE) {
-   // $options['attributes']['title'] = strip_tags($options['attributes']['title']);
-  //}
+  if (isset($options['attributes']['title']) && strpos($options['attributes']['title'], '<') !== FALSE) {
+    $options['attributes']['title'] = strip_tags($options['attributes']['title']);
+  }
+
   return '<a href="'. check_url(url($path, $options)) .'"'. drupal_attributes($options['attributes']) .'><span>'. str_replace('[br]', '<br />', $text) .'</span></a>';
 }
 ?>

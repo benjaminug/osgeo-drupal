@@ -18,7 +18,7 @@
 					<?php print str_replace('value=""', 'value="Search"', render($page['header']));?>
 					<?php if (isset($primary_links)) : ?>
 						<div class="nav-holder">
-						<?php print theme('links', $primary_links, array('id' => 'nav')) ?>
+						<?php print theme('links', $primary_links, array('id' => 'nav')); ?>
 						</div>
 					<?php endif; ?>
 				</div>

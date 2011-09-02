@@ -13,7 +13,7 @@
 	<div id="wrapper">
 		<div class="wrapper-holder">
 			<div id="header">
-				<h1 class="logo"><a href="<?php print $base_path;?>">OSGeo Your Open Source Compass</a></h1>
+				<h1 class="logo"><a href="<?php print $base_path; ?>">OSGeo Your Open Source Compass</a></h1>
 				<div class="header-holder">
 					<?php print str_replace('value=""', 'value="Search"', render($page['header']));?>
 					<?php if (isset($primary_links)) : ?>
@@ -24,7 +24,8 @@
 				</div>
 			</div>
 			<div id="main">
-				<div class="menu-holder">
+				<div class="
+menu-holder">
 					<?php print osgeo_links($secondary_menu, array('class' => 'menu')) ?>
 				</div>
 				<div class="twocolumns">
@@ -32,6 +33,7 @@
 						<div class="twocolumns-holder">
 							<div id="sidebar">
 								<?php print render($page['left']);  ?>
+								<?php print render($page['right']); ?>
 								<?php print render($page['menu1']); ?>
 								<?php print render($page['menu2']); ?>
 								<?php print render($page['menu3']); ?>
@@ -42,17 +44,17 @@
 								<?php if (render($page['highlighted'])): print '<div id="highlighted">'. render($page['highlighted']) .'</div>'; endif; ?>
 								<?php if ($tabs): print '<div id="tabs-wrapper">'; endif; ?>
 								<?php if ($title): print '<h2'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h2>'; endif; ?>
-								<?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
-								<?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
+								<?php if ($tabs): print '<ul class="tabs primary">'. render($tabs) .'</ul></div>'; endif; ?>
+								<?php if ($tabs2): print '<ul class="tabs secondary">'. render($tabs2) .'</ul>'; endif; ?>
 								<?php if ($show_messages && $messages): print $messages; endif; ?>
 								<?php print render($page['help']); ?>
-								<?php render($page['content']) ?>
+								<?php print render($page['content']); ?>
 							</div>
 						</div>
 					</div>
 					<div class="b"></div>
 				</div>
-				<?php render($page['bottom']); ?>
+				<?php print render($page['bottom']); ?>
 			</div>
 		</div>
 	</div>

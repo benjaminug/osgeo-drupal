@@ -1,10 +1,14 @@
 name = OSGeo_2
 version = 2.0
+engine = phptemplate
 core = 7.x
-stylesheets[all][] = style.css ie.css
+
+stylesheets[all][] = style.css
+stylesheets[all][] = ie.css
 
 features[] = main_menu
 features[] = secondary_menu
+
 regions[header]	= Header
 regions[main]	= Main
 regions[menu1]  = Menu 1
