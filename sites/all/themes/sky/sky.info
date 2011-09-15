@@ -1,0 +1,52 @@
+; $Id$
+
+name = Sky
+description = A minimal, re-colorable theme for Drupal 7 that uses HTML5 and the 960 Grid System.
+core = 7.x
+
+; REGIONS
+;-------------------------------------------------------------------------------
+regions[page_top] = Page Top
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[footer] = Footer
+regions[copyright] = Copyright
+regions[collapsible] = Collapsible
+regions[page_bottom] = Page Bottom
+
+
+; STYLESHEETS
+;-------------------------------------------------------------------------------
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/forms.css
+stylesheets[all][] = css/colors.css
+stylesheets[print][] = css/print.css
+
+
+; SCRIPTS
+;-------------------------------------------------------------------------------
+scripts[] = js/scripts.js
+
+
+; FEATURES
+;-------------------------------------------------------------------------------
+features[] = logo
+features[] = favicon
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+
+; Information added by drupal.org packaging script on January 1, 1970 - 00:00
+version = "7.x-1.6"
+core = "7.x"
+project = "sky"
+datestamp = "1297144592"
+

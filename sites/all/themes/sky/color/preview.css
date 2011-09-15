@@ -1,0 +1,92 @@
+/* $Id*/
+
+/* Page tweaks
+-------------------------------------------------------------------------*/
+.region-content {
+  padding-top: 0;
+}
+h1.title
+.region-help {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#content > div.inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* Color scheme form
+-------------------------------------------------------------------------*/
+fieldset#color_scheme_form {
+  font-size: 0.923em;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+#color_scheme_form .color-form {
+  max-width: none;
+}
+#color_scheme_form > legend {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+fieldset#color_scheme_form > .fieldset-wrapper {
+  padding: 0;
+}
+.form-item-scheme label {
+  display: inline;
+  margin: 0 1em 0 1em;
+}
+/* Palette */
+#color_scheme_form #palette fieldset {
+  margin: 1em 0 0 0;
+  border: none;
+}
+#color_scheme_form .color-form label {
+  margin-left: 0;
+}
+#color_scheme_form #palette .form-item {
+  padding: 0;
+}
+#color_scheme_form .color-form input.form-text {
+  padding: 0.1em;
+  border-width: 1px;
+}
+#color_scheme_form #palette .item-selected {
+  background-color: transparent;
+  font-weight: bold;
+}
+/* Lock icons */
+#color_scheme_form .hook {
+  display: none;
+}
+#color_scheme_form #palette .lock {
+  background: url(../images/black.png) no-repeat 0 -66px;
+  top: 0;
+  left: auto;
+  width: 20px;
+  height: 25px;
+}
+#color_scheme_form  #palette .unlocked {
+  background: url(../images/gray.png) no-repeat 0 -66px;
+}
+
+
+/* Preview
+-------------------------------------------------------------------------*/
+#color_scheme_form .color-form > h2 {
+  background-color: transparent;
+  color: #999;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.25em;
+  padding-left: 0.5em;
+  text-transform: uppercase;
+}
+#preview {
+  padding: 1em 0 0 0;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #e6e4e2;
+}

@@ -1,0 +1,68 @@
+/* $Id$ */
+
+.list-inline .content li,
+.inline li,
+.links li,
+.tabs li,
+.pager li,
+.pager li.pager-current,
+.breadcrumb a,
+.region-navigation .content ul a,
+.menu-name-menu-social a {
+  display: inline;
+  zoom: 1;
+}
+.region-navigation {
+  float: left;
+}
+.sidebar {
+  overflow: hidden;
+}
+.region-navigation .content ul a,
+.region-navigation .content ul ul li {
+  float: left;
+  display: inline;
+  position: relative;
+}
+.collapsible-toggle,
+label,
+.form-submit,
+.region-navigation .content ul a {
+  font-weight: bold;
+}
+table label,
+.form-item label.option {
+  font-weight: normal;
+}
+.block-search input.form-text {
+  width: 75%;
+}
+.block-search input.form-submit {
+  margin-top: 0.5em;
+}
+.node header,
+.comment header {
+  zoom: 1;
+}
+* html article .field-type-image {
+  width: 1%;
+}
+article .field-name-field-tags {
+  line-height: normal;
+}
+.resizable-textarea textarea {
+  width: 97%;
+}
+input.form-submit {
+  padding-left: 0;
+  padding-right: 0;
+}
+.vertical-tabs .fieldset-wrapper {
+  padding: 0;
+}
+.vertical-tabs .form-type-file input {
+  width: 100%;
+}
+* html .vertical-tabs .form-item {
+  width: 95%; /* IE6 */
+}

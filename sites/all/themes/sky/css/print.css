@@ -1,0 +1,156 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+  display: block;
+}
+a {
+  text-decoration: none;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+blockquote, p {
+  margin: 1.5em 0;
+}
+p:first-child,
+p.first-child {
+  margin-top: 0;
+}
+img {
+  border: none;
+}
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
+}
+pre, code, kbd, samp, tt {
+  font-size: 0.923em;
+  font-family: Monaco, monospace, sans-serif;
+}
+pre {
+  padding: 1em;
+  white-space: pre-wrap;
+}
+div.codeblock, pre {
+  background-color: #eee;
+  border: solid 1px #ddd;
+  padding: 1em;
+}
+mark {
+  font-size: 0.769em;
+}
+
+
+/* Layout
+-------------------------------------------------------------------------*/
+#toolbar,
+#header,
+#footer,
+div.tabs,
+nav.links,
+div.sidebar,
+div.breadcrumb {
+  display: none;
+}
+#content {
+  width: 98%;
+}
+body.toolbar-drawer {
+  padding-top: 0 !important;
+}
+
+/* Headings
+-------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1em;
+  padding: 0;
+  margin: 24px 0 12px 0;
+}
+h1 { font-size: 2.153em; } /* 28px */
+h2 { font-size: 1.692em; } /* 22px */
+h3 { font-size: 1.385em; } /* 18px */
+h4 { font-size: 1.231em; } /* 16px */
+h5 { font-size: 1.077em; } /* 14px */
+h6 { font-size: 1em; }
+
+h1.book-heading {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 0.4em;
+}
+
+/* Lists
+-------------------------------------------------------------------------*/
+dl {
+  margin: 1em 0;
+  padding: 1em;
+}
+dt {
+  font-size: 1.231em;
+}
+dd {
+  margin: 0 0 0.5em 0;
+  padding: 1em 0 1em 2em;
+}
+dd:last-child {
+  border-bottom: 0;
+}
+dl dl {
+  margin-left: 1em;
+}
+ul, ol {
+  padding: 0;
+  margin: 0 0 0 1.5em;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+ul.inline,
+.inline .content ul {
+  display: inline;
+  margin-left: 0;
+}
+ul.inline li,
+.inline .content li {
+  display: inline;
+  margin: 0 0.5em 0 0;
+}
+li p {
+  margin-top: 0;
+}
+
+/* Tables
+-------------------------------------------------------------------------*/
+table {
+  border: solid #e4e2e0;
+  border-collapse: collapse;
+  border-width: 1px 1px 0 1px;
+  margin: 1em 0;
+  width: 100%;
+}
+th {
+  font-weight: 600;
+  text-align: left;
+}
+th, td {
+  border: solid #e4e2e0;
+  border-width: 0 0 1px 0;
+  padding: 0.5em;
+  vertical-align: top;
+}
+thead th:last-child,
+tr td:last-child {
+  border-right: solid 1px #e4e2e0;
+}
+table .form-item,
+table p {
+  margin: 0;
+}

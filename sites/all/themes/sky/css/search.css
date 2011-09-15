@@ -1,0 +1,37 @@
+/* $Id$ */
+.search-form {
+  margin: 2em 0 1em 0;
+}
+.search-form input {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.search-results {
+  list-style: none;
+}
+.search-advanced .criterion {
+  float: left; /* LTR */
+  margin-right: 2em; /* LTR */
+}
+.search-advanced .action {
+  float: left; /* LTR */
+  clear: left; /* LTR */
+}
+p.search-info {
+  text-align: right;
+  color: #666;
+  font-size: 0.846em;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.search-results {
+  margin: 0;
+}
+.search-result {
+  border: solid 1px #e6e4e2;
+  margin: 0 0 1em 0;
+  padding: 1em;
+}
+.search-result h3.title {
+  margin-top: 0;
+}

@@ -1,0 +1,115 @@
+/* $Id$ */
+
+#permissions td.module {
+  font-weight: bold;
+}
+#permissions td.permission {
+  padding-left: 1.5em; /* LTR */
+}
+
+/**
+ * Override default textfield float to put the "Add role" button next to
+ * the input textfield.
+ */
+#user-admin-roles td.edit-name {
+  clear: both;
+}
+#user-admin-roles .form-item-name {
+  float: left;
+  margin-right: 1em;
+}
+
+/**
+ * Password strength indicator.
+ */
+.password-strength {
+  width: 14em;
+  float: right;  /* LTR */
+  margin-top: 1.4em;
+}
+.password-strength-title {
+  display: inline;
+}
+.password-strength-text {
+  float: right; /* LTR */
+  font-weight: bold;
+}
+.password-indicator {
+  background-color: #C4C4C4;
+  height: 0.3em;
+  width: 100%;
+}
+.password-indicator div {
+  height: 100%;
+  width: 0%;
+  background-color: #47C965;
+}
+input.password-confirm,
+input.password-field {
+  width: 16em;
+  margin-bottom: 0.4em;
+}
+div.password-confirm {
+  display: inline;
+  padding-left: 2em;
+  visibility: hidden;
+}
+div.form-item div.password-suggestions {
+  padding: 0.2em 0.5em;
+  margin: 0.7em 0;
+  width: 38.5em;
+  border: 1px solid #B4B4B4;
+}
+div.password-suggestions ul {
+  margin-bottom: 0;
+}
+.password-parent {
+  margin: 0;
+  width: 34.3em;
+}
+
+/**
+ * Password confirmation checker.
+ */
+.confirm-parent {
+  margin: 0;
+}
+.password-indicator {
+  background-color: #e6e4e2;
+  height: 0.7em;
+  margin-top: 0.2em;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.password-indicator div {
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-radius: 4px 0 0 4px;
+}
+div.form-item div.form-type-password label {
+  display: block;
+}
+div.form-item div.password-suggestions {
+  background-color: #e6e4e2;
+  border-color: #d4cfcb;
+  color: #675b50;
+  font-weight: 500;
+  font-size: 1.077em;
+  padding: 1em;
+  width: auto;
+}
+.password-suggestions ul {
+  font-weight: normal;
+  font-size: 0.923em;
+  margin-top: 1em;
+  line-height: 1.7em;
+}
+.profile .user-picture {
+  float: right;
+}
+.profile .user-picture img {
+  padding: 0.5em;
+  border: solid 1px #e6e4de;  
+}
