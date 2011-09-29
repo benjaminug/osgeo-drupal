@@ -1,0 +1,108 @@
+<?php 
+
+/**
+* @file
+* this module help you to add date and time picker field to your content type
+*/
+
+
+/**
+* Implementation of hook_field_info()
+*/
+function date_time_field_field_info() {
+  return array(
+  'date_time_field_date_time' => array(
+  'label' => t('Date and Time') , 
+  'description' =>  t('Date and Time picker field to your content type') , 
+  'default_formatter' => 'date_time_field_formatter' ,
+  'default_widget' =>   'date_time_field_picker' ,  
+  ),
+  );
+}
+
+
+/**
+* Implementation of hook_field_is_empty()
+*/
+function date_time_field_field_is_empty($item, $field) {
+  return empty($item['date_time']) ;
+}
+
+/**
+* Implementation of hook_field_fomatter_info()
+*/
+function date_time_field_field_formatter_info() {
+  return array(
+  'date_time_field_formatter' => array(
+  'label' => t('Date And Time Fomatter')  , 
+  'field types' => array('date_time_field_date_time')  ,
+  ),
+  );
+}
+
+
+/**
+* Implementation of hook_field_formatter_view()
+*/
+function date_time_field_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array() ;
+  switch ($display['type']) {
+  case 'date_time_field_formatter' :
+  foreach ($items as $delta => $item) {
+  $element[$delta]['#markup'] = "<p>" . $item['date_time'] . "</p>" ;
+  }
+  break ;
+  }
+  return $element ;
+}
+
+
+
+/**
+* Implementation of hook_field_widget_info()
+*/
+function date_time_field_field_widget_info() {
+  return array(
+  'date_time_field_picker' => array(
+  'label' => t('Date Time Picker') , 
+  'field types' => array('date_time_field_date_time') , 
+  ) ,
+  );
+}
+
+
+
+/**
+* Implmenetation of hook_field_widget_form()
+*/
+function date_time_field_field_widget_form($form, $form_state, $field, $instance, $lancode, $items, $delta, $element) {
+  $value = isset($items[$delta]['date_time']) ? $items[$delta]['date_time'] : '';
+  $element += array(
+  '#delta' => $delta,
+  );
+  $label = !empty($element['#title']) ? $element['#title'] : t('Date and Time') ; 
+  $element['date_time'] = array() ; 
+  switch ($instance['widget']['type']) {
+  case 'date_time_field_picker' :
+  /* get current module path to add the js files*/
+  $module_path = drupal_get_path('module' , 'date_time_field') ;
+  /* get the path of the js files*/
+  $custom_script_path = url($module_path . "/js/jquery-ui-1.8.14.custom.min.js", array('absolute' => TRUE)) ; 
+  $timepicker_script_path = url($module_path . "/js/jquery-ui-timepicker-addon.js", array('absolute' => TRUE)) ; 
+  $module_script_path = url($module_path . "/js/date_time.js", array('absolute' => TRUE)) ; 
+  /* add the js files to drupal*/
+  drupal_add_js($custom_script_path , array('weight' => 1 , 'defer' => TRUE ))  ; 
+  drupal_add_js($timepicker_script_path , array('weight' => 2 , 'defer' => TRUE ))  ; 
+  drupal_add_js($module_script_path , array('weight' => 3 , 'defer' => TRUE) )  ;
+
+  /*the form of date and time field*/
+  $element['date_time'] += array(
+  '#title' => t( '@title' , array('@title' => $label)) , 
+  '#type' => 'textfield' , 
+  '#default_value' => $value ,
+  '#attributes' => array('class' => array('date-time-field')) , 
+  );
+  break ; 
+  }
+  return $element ; 
+}
